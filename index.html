@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	<title>Amigane Atelie</title>
+</head>
+<body>
+	<input type="checkbox" id="toggle"/>
+	<label for="toggle" class="toggle">
+		Menu
+	</label>
+<div id="menu">
+	<ul id="menu_list">
+		<li class="item"><a href="#">Menu</a></li>
+		<li class="item submenulink"><a class="textsubmenu" href="#">Texto bem Grande</a>
+			<ul class="submenu">
+				<li><a href="#">texto bem grande</a></li>
+				<li><a href="#">submenu</a></li>
+				<li><a href="#">submenu</a></li>
+				<li><a href="#">submenu</a></li>
+			</ul>
+		</li>
+		<li class="item submenulink"><a href="#">Menu</a>
+		<ul class="submenu">
+				<li><a href="#">texto bem grande</a></li>
+				<li><a href="#">submenu</a></li>
+				<li><a href="#">submenu</a></li>
+				<li><a href="#">submenu</a></li>
+			</ul></li>
+		<li class="item"><a href="#">Menu</a></li>
+		<li class="item"><a href="#">Menu</a></li>
+	</ul>
+	<input type="checkbox" id="search_link">
+	<label for="search_link" class="icon_search"></i></label>
+	<div class="search">
+		<input class="box_search" type="search">
+		<button class="button_search"
+		>ir</button> 
+	</div>
+</div>
+<script>
+	document.querySelector('.submenulink').addEventListener('click',() => {
+		document.querySelector('.submenu').classList.toggle('submenushow')
+		document.querySelector('.submenulink').classList.toggle('submenulinkshow')
+
+
+	})
+</script>
+</body>
+</html>
+	
