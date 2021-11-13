@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Hammersmith+One&display=swap');
+:root {
+  --main-font: 'Hammersmith One', sans-serif;
+  --font-2:'Hachi Maru Pop', cursive;
+  --main-color:#f8a6ae;
+  --text-color:#424242;
+  --blue-color:#a8e1cd;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,7 +58,52 @@ table {
 *{
     box-sizing: border-box;
 }
-
+.container{
+    width: 100vw;
+    padding: 0 5%;
+}
+/* Hero */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.description_hero{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap:25px;
+}
+.title_site{
+    font-family: var(--main-font);
+    font-size:3.5vw;
+    color:var(--main-color);
+    text-align: center;
+}
+.description{
+    font-family: var(--font-2);
+    font-size:1.2vw;
+    color:var(--text-color);
+    line-height: 25px;
+    font-weight: 100;
+    text-align: center;
+}
+.action{
+    height:40px;
+    width: 150px;
+    background: var(--blue-color);
+    color:var(--text-color);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 auto;
+}
 /* menu */
 .header{
     width:100vw;
@@ -60,15 +112,18 @@ table {
     align-items: center;
     padding: 0 10px;
     background:#F6F2F2;
+    grid-template-columns: 1fr 1fr;
 }
 #menu{
-    width:100vw;
+    width: calc(100vw - 70px);
     height:40px;
     background:#F6F2F2;
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
+    grid-column: 1;
+    grid-row: 1;
 }
 #menu_list{
     display: flex;
@@ -80,6 +135,7 @@ table {
 }
 #menu_list li {
     height:90%;
+    padding:0 10px;
 }
 #menu_list li a{
 /*background:#fff;*/
@@ -128,6 +184,8 @@ color:#E8A4AB;
    padding: 0 15px;
    cursor: pointer;
    transition: 0.5s;
+   grid-row: 1;
+   grid-column: 2;
 }
 #search_link:checked ~ .icon_search:before{
     content:"\f00d";
